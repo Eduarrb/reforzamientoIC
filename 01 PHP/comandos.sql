@@ -1,3 +1,9 @@
 CREATE DATABASE reforzamiento;
 
-create database reforzamiento;
+CREATE TABLE usuarios (
+    id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nombres VARCHAR(100) NOT NULL,
+    apellidos VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    password VARCHAR(100) NOT NULL
+)

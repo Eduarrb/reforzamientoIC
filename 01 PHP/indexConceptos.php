@@ -59,7 +59,45 @@
                 // print_r($array2);
                 echo '<br>';
                 // print_r($array2);
-                echo $array2['nombre'];
+                // echo $array2['nombre'];
+
+                // *********
+                // CONDICIONALES
+                $num1 = 10;
+
+                if($num1 == 11){ // -> true o false
+                    echo 'si son iguales';
+                } 
+                elseif($num1 > 5){
+                    // echo 'si es mayor que 5';
+                }
+                else {
+                    echo 'son diferentes';
+                }
+                // ALERTA
+                // echo 12 + '5';
+
+                // ITERAR SOBRE ARRAYS
+                $personajes = ['joshi', 'mario', 'goku', 'superman', 'capitan america'];
+                // echo $personajes[4];
+
+                $prueba = "eduardo" . " " . "sanchez";
+
+                $num2 = 20;
+                echo $num2;
+                echo "<br>";
+                // $num2 = $num2 + 5;
+                $num2 += 5;
+                echo $num2;
+                echo "<br>";
+
+                $plantillaHTML = "";
+                for($i = 0; $i < 5; $i++){
+                    echo $personajes[$i] . "<br>";
+                    // $plantillaHTML = $plantillaHTML . "<h1>{$personajes[$i]}</h1>";
+                    $plantillaHTML .= "<h1>{$personajes[$i]}</h1>";
+                }
+                echo $plantillaHTML;
             ?>
         </div>
     </div>
