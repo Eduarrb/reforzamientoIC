@@ -14,6 +14,9 @@
         require_once('controllers/formController.php');
         require_once('controllers/usuariosController.php');
     ?>
+    <?php
+        include "views/nav.php";
+    ?>
     <div class="row">
         <div class="container">
             <h1 class="text-center">Ingresar Usuario</h1>
@@ -24,42 +27,42 @@
 
                 // INDICES   0       1      2   3          4
                 //                                    0     1
-                $array1 = ['joshi', 'ryo', 12, true, [12, '1980']];
-                // echo $array1[3];
-                // define('nombre1','juancito');
-                // echo nombre1;
+                // $array1 = ['joshi', 'ryo', 12, true, [12, '1980']];
+                // // echo $array1[3];
+                // // define('nombre1','juancito');
+                // // echo nombre1;
+                // // echo '<br>';
+
+                // // EL SIGNO IGUAL = TIENE LA FUNCIONALIDAD DE ASIGNACION 
+                // $fullName = 'Eduardo arroyo';
+
+                // // SIGNOS DE COMPARACION
+                // /*
+                //     <
+                //     <=
+                //     >
+                //     <=
+                //     ==
+                // */
+                // // 1 == 1
+
+                // // echo $fullName;
+                // $fullName = "Eduardo Arroyo Bahamonde";
+                // $num = 10.5;
+                // $bool = false;
                 // echo '<br>';
+                // // echo $fullName;
+                // // define('nombre1', 'pepito');
+                // // print_r($array1[4]);
+                // echo '<br>';
+                // // array asosiativo
+                // // key - value pair
+                // $array2 = ['nombre' => 'Eduardo', 'apellido' => 'Arroyo'];
 
-                // EL SIGNO IGUAL = TIENE LA FUNCIONALIDAD DE ASIGNACION 
-                $fullName = 'Eduardo arroyo';
-
-                // SIGNOS DE COMPARACION
-                /*
-                    <
-                    <=
-                    >
-                    <=
-                    ==
-                */
-                // 1 == 1
-
-                // echo $fullName;
-                $fullName = "Eduardo Arroyo Bahamonde";
-                $num = 10.5;
-                $bool = false;
-                echo '<br>';
-                // echo $fullName;
-                // define('nombre1', 'pepito');
-                // print_r($array1[4]);
-                echo '<br>';
-                // array asosiativo
-                // key - value pair
-                $array2 = ['nombre' => 'Eduardo', 'apellido' => 'Arroyo'];
-
-                // print_r($array2);
-                echo '<br>';
-                // print_r($array2);
-                echo $array2['nombre'];
+                // // print_r($array2);
+                // echo '<br>';
+                // // print_r($array2);
+                // echo $array2['nombre'];
             ?>
         </div>
     </div>
