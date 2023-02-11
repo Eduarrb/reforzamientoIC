@@ -33,6 +33,10 @@
         public function imprimeDepartamento(){
             echo $this->departamento;
         }
+
+        public function cambiarDepartamento($dep){
+            $this->departamento = $dep;
+        }
     }
 
     $eduardo = new Empleado('Eduardo', 'Arroyo', 'Almacen', 'edu@gmail.com', 'uc001');
@@ -49,5 +53,7 @@
     echo "<br>";
     // $eduardo->departamento = 'contabilidad';
     $eduardo->imprimeDepartamento();
-
+    $eduardo->cambiarDepartamento('Contabilidad');
+    echo "<br>";
+    $eduardo->imprimeDepartamento();
 ?>
