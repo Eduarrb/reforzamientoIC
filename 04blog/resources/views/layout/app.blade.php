@@ -8,21 +8,33 @@
 
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
         <!-- Styles -->
-        {{-- @vite('resources/css/app.css') --}}
+        @vite('resources/css/app.scss')
 
     </head>
-    <body class="antialiased">
-        <nav>
-            <a href="/">HOME</a>
-            <a href="/nosotros">Nosotros</a>
-            <a href="/tienda">Tienda</a>
-        </nav>
-
-        <h1 class="text-center">@yield('titulo')</h1>
-        <hr>
-        @yield('contenido')
-        
+    <body class="bg-dark bg-opacity-10">
+        <header class="border-bottom p-5 bg-white">
+            <div class="container">
+                <div class="row">
+                    <nav class="navbar">
+                        <h1 class="text-center fs-1">Mi Red<strong class="text-primary">Social</strong></h1>
+                        <div class="d-flex">
+                            <a href="" class="nav-link px-1 fs-5 text-secondary text-uppercase">login</a>
+                            <a href="{{ route('register') }}" class="nav-link px-5 fs-5 text-secondary text-uppercase">crear cuenta</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="container py-5">
+            <div class="row">
+                <h2 class="text-center fs-2 mb-5">@yield('titulo')</h2>
+                @yield('contenido')
+            </div>
+        </main>
+        <footer class="text-center text-secondary">
+            Mi Red<strong class="text-primary">Social</strong> - Todos los derechos reservados {{ now()->year }}
+        </footer>
     </body>
 </html>
