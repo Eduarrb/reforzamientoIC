@@ -13,14 +13,14 @@
         @vite('resources/css/app.scss')
 
     </head>
-    <body class="bg-dark bg-opacity-10">
+    <body class="bg-dark bg-opacity-25">
         <header class="border-bottom p-5 bg-white">
             <div class="container">
                 <div class="row">
                     <nav class="navbar">
                         <h1 class="text-center fs-1">Mi Red<strong class="text-primary">Social</strong></h1>
                         <div class="d-flex">
-                            <a href="" class="nav-link px-1 fs-5 text-secondary text-uppercase">login</a>
+                            <a href="{{ route('login') }}" class="nav-link px-1 fs-5 text-secondary text-uppercase">login</a>
                             <a href="{{ route('register') }}" class="nav-link px-5 fs-5 text-secondary text-uppercase">crear cuenta</a>
                         </div>
                     </nav>
@@ -28,7 +28,7 @@
             </div>
         </header>
         <main class="container py-5">
-            <div class="row">
+            <div class="row justify-content-md-center">
                 <h2 class="text-center fs-2 mb-5">@yield('titulo')</h2>
                 @yield('contenido')
             </div>

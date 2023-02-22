@@ -14,8 +14,9 @@ class RegisterController extends Controller
     }
 
     public function store(Request $request){
-        // dd('formulario enviado');
-        // dd($request);
+
+        $request->request->add(['username' => Str::slug($request->username)]);
+
         $this->validate($request, [
             'name' => ['required', 'min:5'],
             'username' => "required|unique:users|min:3|max:20",
@@ -23,13 +24,18 @@ class RegisterController extends Controller
             'password' => ['required', 'confirmed', 'min:6']
         ]);
 
-        // dd('generando usuario');
         User::create([
             'name' => $request->name,
-            // 'username' => Str::lower($request->username),
             'username' => $request->username,
             'email' => $request->email,
             'password' => Hash::make($request->password)
         ]);
+
+        auth()->attempt([
+            'email' => $request->email,
+            'password' => $request->password
+        ]);
+
+        return redirect()->route('post.index');
     }
 }
