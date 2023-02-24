@@ -34,6 +34,12 @@
                     </div>
                 @enderror
             </div>
+
+            <div class="form-group mb-3">
+                <input type="checkbox" name="remember" id="remember" class="form-check-input me-1">
+                <label for="remember">Mantener sesión abierta</label>
+            </div>
+
             <div class="d-grid gap-2">
                 <input type="submit" class="btn btn-success" value="Iniciar Sesion">
             </div>
