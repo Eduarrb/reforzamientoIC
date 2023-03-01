@@ -7,10 +7,13 @@
         <title>MiRed - @yield('titulo')</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        {{-- <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"> --}}
         
         <!-- Styles -->
+        @stack('styles')
+
         @vite('resources/css/app.scss')
+        @vite('resources/js/app.js')
 
     </head>
     <body class="bg-dark bg-opacity-25">
