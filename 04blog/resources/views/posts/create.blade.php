@@ -15,7 +15,7 @@
         </form>
     </div>
     <div class="col-md-6">
-        <form action="" method="post">
+        <form action="{{ route('posts.store') }}" method="post">
             @csrf
             <div class="form-group mb-3">
                 <label for="titulo" class="mb-1">Título</label>
@@ -30,6 +30,14 @@
                 <label for="descripcion" class="mb-1">Descripción</label>
                 <textarea name="descripcion" id="descripcion" placeholder="Descripción del post" class="form-control @error('descripcion') border-danger @enderror">{{ old('descripcion') }}</textarea>
                 @error('descripcion')
+                    <div class="text-danger">
+                        {{ $message }}
+                    </div>
+                @enderror
+            </div>
+            <div>
+                <input type="hidden" name="imagen" value={{ old('imagen') }}>
+                @error('imagen')
                     <div class="text-danger">
                         {{ $message }}
                     </div>
